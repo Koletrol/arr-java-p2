@@ -1,0 +1,11 @@
+let output = document.getElementById("output");
+
+let input = document.getElementById("input");
+
+let shop = [];
+
+function add_product() {
+  let product = input.value;
+  shop.push(product);
+  output.innerHTML = shop.join(", ");
+}

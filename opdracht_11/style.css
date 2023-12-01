@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.game {
+  width: 50vw;
+  height: 30vh;
+  background-color: #eee;
+  position: relative;
+}
+
+.game-over {
+  display: none;
+}
+
+.dinosaur {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+}
+.obstacle {
+  width: 20px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50vw;
+  animation: moveLeft 2s linear infinite;
+}
+
+@keyframes moveLeft {
+  0% {
+    left: 50vw;
+  }
+  100% {
+    left: -5vw;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
